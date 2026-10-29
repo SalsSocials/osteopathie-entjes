@@ -1,5 +1,6 @@
 {
   "_uitleg": "Alle praktijkgegevens op één plek. null betekent: nog niet aangeleverd, de site toont dan een gele TODO. Vul in en draai `node build.mjs`.",
+  "inOpbouw": true,
   "naam": "Osteopathie Entjes",
   "eigenaar": "Cyril Entjes",
   "domein": "https://www.osteopathie-entjes.nl",

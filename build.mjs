@@ -192,7 +192,7 @@ for (const file of readdirSync(new URL('./src/', import.meta.url)).filter((f) =>
     .replaceAll('{{title}}', esc(meta.title))
     .replaceAll('{{description}}', esc(meta.description))
     .replaceAll('{{url}}', P.domein + meta.path)
-    .replaceAll('{{robots}}', meta.noindex ? 'noindex, follow' : 'index, follow')
+    .replaceAll('{{robots}}', P.inOpbouw ? 'noindex, nofollow' : meta.noindex ? 'noindex, follow' : 'index, follow')
     .replaceAll('{{scripts}}', scripts)
     .replaceAll('{{schema}}', schema)
     .replace(/\{\{current:([^}]+)\}\}/g, (_, path) => (path === meta.path ? 'aria-current="page"' : ''))

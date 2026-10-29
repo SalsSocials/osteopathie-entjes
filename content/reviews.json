@@ -1,5 +1,5 @@
 {
   "_uitleg": "Zet hier alleen echte reviews (met toestemming). Zolang 'reviews' leeg is en 'toonVoorbeeld' true staat, toont de site gemarkeerde VOORBEELD-kaarten. Zet 'toonVoorbeeld' op false om de sectie helemaal te verbergen tot er echte reviews zijn.",
-  "toonVoorbeeld": true,
+  "toonVoorbeeld": false,
   "reviews": []
 }
