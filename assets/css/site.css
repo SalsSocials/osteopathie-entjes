@@ -117,12 +117,19 @@ html { scrollbar-color: var(--taupe) var(--cream); }
   max-width: var(--max); margin: 0 auto;
   display: flex; align-items: center; gap: 2rem;
   height: var(--header-h); padding: 0 var(--gutter);
-  transition: height 0.35s var(--ease-out);
+  transition: translate 0.35s var(--ease-out);
 }
-.site-header.is-compact { background: var(--cream); box-shadow: 0 1px 0 color-mix(in srgb, var(--taupe) 55%, transparent); }
-.site-header.is-compact .header-inner { height: 64px; }
-.brand { display: block; flex: none; width: clamp(188px, 14vw + 40px, 232px); transition: width 0.35s var(--ease-out); }
-.site-header.is-compact .brand { width: 192px; }
+/* Compact na de hero: alleen transform en opacity, geen hoogte-animatie. De achtergrond is een laag die inschuift. */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--cream); box-shadow: 0 1px 0 color-mix(in srgb, var(--taupe) 55%, transparent);
+  transform-origin: top; scale: 1 0.76; opacity: 0;
+  transition: opacity 0.3s var(--ease-out), scale 0.35s var(--ease-out);
+}
+.site-header.is-compact::before { opacity: 1; }
+.site-header.is-compact .header-inner { translate: 0 -10px; }
+.brand { display: block; flex: none; width: clamp(188px, 14vw + 40px, 232px); transform-origin: left center; transition: scale 0.35s var(--ease-out); }
+.site-header.is-compact .brand { scale: 0.86; }
 .brand .logo { width: 100%; height: auto; }
 
 .main-nav { margin-left: auto; }
@@ -171,7 +178,6 @@ html { scrollbar-color: var(--taupe) var(--cream); }
   .main-nav, .header-cta { display: none; }
   .menu-toggle { display: grid; }
   :root { --header-h: 68px; }
-  .site-header.is-compact .header-inner { height: 60px; }
   .site-header.menu-open { background: var(--cream); }
 }
 @media (max-width: 860px) {
