@@ -9,6 +9,11 @@
     if (el) window.track(el.dataset.track, { plek: el.dataset.trackPlek || null });
   });
 
+  // FAQ: event bij openen van een vraag.
+  document.querySelectorAll('.faq-item').forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open) window.track('faq_open', { vraag: d.querySelector('summary').textContent.trim() });
+  }));
+
   // Header wordt compact zodra de bovenkant van de pagina uit beeld is.
   const sentinel = document.createElement('div');
   sentinel.style.cssText = 'position:absolute;top:0;left:0;height:120px;width:1px;pointer-events:none';

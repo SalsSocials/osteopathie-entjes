@@ -5,5 +5,35 @@
       "maxFindings": 5,
       "maxChars": 8000
     }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "rgb(246, 241, 231)",
+        "createdAt": "2026-10-29T02:24:11.816Z",
+        "reason": "brief van Sal: --cream ca. #F6F1E7 expliciet voorgeschreven als achtergrond"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "assets/css/site.css"
+        ],
+        "createdAt": "2026-10-29T02:24:11.841Z",
+        "reason": "alleen op .review.is-example: bewuste markering van VOORBEELD-reviewkaarten die Sal moet vervangen"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-29T02:24:11.866Z",
+        "reason": "statische meting leest clamp() niet; gerenderde koppen zijn 51-116px tegen 17px tekst"
+      }
+    ]
   }
 }

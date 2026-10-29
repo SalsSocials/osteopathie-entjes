@@ -2,7 +2,8 @@
   "title": "Osteopathie Entjes | Osteopaat Cyril Entjes in Noord-Holland",
   "description": "Osteopathie bij nek-, rug-, schouder- en heupklachten. Osteopaat Cyril Entjes onderzoekt en behandelt met de handen. Bekijk of het bij je klacht past en maak een afspraak.",
   "path": "/",
-  "scripts": ["gsap", "lenis", "home"]
+  "scripts": ["gsap", "lenis", "home", "afspraak"],
+  "schema": ["business", "faq"]
 } -->
 <main id="inhoud">
 
@@ -51,9 +52,125 @@
     </div>
   </section>
 
-  <section class="next-up" id="klachtenwijzer" aria-label="Volgende secties">
-    <p>Hier komen de snelle feiten, de klachtenwijzer en de rest van de pagina, na akkoord op de hero.</p>
+  <section class="facts" aria-label="In het kort">
+    <dl class="facts-list">
+      <div class="fact" data-reveal style="--i:0"><dt>Duur eerste consult</dt><dd><span class="fact-num">{{consult-duur}}</span><span class="fact-unit">minuten</span></dd></div>
+      <div class="fact" data-reveal style="--i:1"><dt>Gemiddeld aantal behandelingen</dt><dd><span class="fact-num">{{gem-behandelingen}}</span><span class="fact-unit">keer</span></dd></div>
+      <div class="fact" data-reveal style="--i:2"><dt>Praktijk in</dt><dd><span class="fact-num fact-place">{{plaats}}</span><span class="fact-unit">Noord-Holland</span></dd></div>
+    </dl>
   </section>
-  <div id="afspraak"></div>
+
+  <section class="section finder" id="klachtenwijzer" aria-labelledby="finder-titel">
+    <div class="wrap finder-grid">
+      <div class="finder-figure">
+        <div class="body-map">
+          <svg class="body-line" viewBox="0 0 240 520" aria-hidden="true">
+            <g class="body-outline">
+              <ellipse cx="120" cy="50" rx="25" ry="31"/>
+              <path d="M108 79 C 109 88, 109 94, 108 100 M132 79 C 131 88, 131 94, 132 100"/>
+              <path d="M108 100 C 90 103, 72 107, 63 122 C 56 170, 52 215, 48 260 C 46 282, 47 298, 52 312"/>
+              <path d="M132 100 C 150 103, 168 107, 177 122 C 184 170, 188 215, 192 260 C 194 282, 193 298, 188 312"/>
+              <path d="M72 140 C 76 185, 82 222, 84 252 C 86 272, 80 290, 78 302"/>
+              <path d="M168 140 C 164 185, 158 222, 156 252 C 154 272, 160 290, 162 302"/>
+              <path d="M78 302 C 74 350, 80 400, 86 432 C 90 465, 90 490, 90 506 L 70 512"/>
+              <path d="M162 302 C 166 350, 160 400, 154 432 C 150 465, 150 490, 150 506 L 170 512"/>
+              <path d="M117 322 C 113 365, 110 400, 108 432 C 106 465, 105 490, 105 506"/>
+              <path d="M123 322 C 127 365, 130 400, 132 432 C 134 465, 135 490, 135 506"/>
+              <path d="M78 302 C 92 318, 106 324, 117 322 M162 302 C 148 318, 134 324, 123 322"/>
+            </g>
+            <path class="body-spine" d="M120 100 C 114 140, 114 170, 120 200 C 126 235, 126 268, 120 300"/>
+          </svg>
+          {{zone-hotspots}}
+        </div>
+      </div>
+      <div class="finder-content">
+        <h2 id="finder-titel" data-split>Waar zit je klacht?</h2>
+        <p class="lead">Kies een plek op het lichaam. Je ziet welke klachten daar vaak voorkomen en hoe osteopathie kan helpen.</p>
+        <div class="zone-chips" role="group" aria-label="Kies een lichaamsdeel">
+          {{zone-chips}}
+        </div>
+        <div class="zone-panel" id="zone-panel" aria-live="polite">
+          {{zone-panels}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-osteo" aria-labelledby="osteo-titel">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="osteo-titel" data-split>Wat is osteopathie?</h2>
+        <p class="definition">Osteopathie is een manuele behandelvorm: de osteopaat onderzoekt en behandelt met de handen. Er wordt gekeken naar het lichaam als geheel, dus naar hoe gewrichten, spieren, bindweefsel en organen samen bewegen.</p>
+      </div>
+      <div class="card-row">
+        <article class="card" data-reveal style="--i:0">
+          <svg class="card-mark" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 30 C 16 30, 18 10, 32 10 S 48 30, 60 30"/><circle cx="32" cy="10" r="3.5"/></svg>
+          <h3>Onderzoeken</h3>
+          <p>Eerst een gesprek over je klacht en je gezondheid. Daarna onderzoekt Cyril hoe je beweegt en waar het lichaam vastzit.</p>
+          <a class="link-arrow" href="/behandelingen#werkwijze">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+        </article>
+        <article class="card" data-reveal style="--i:1">
+          <svg class="card-mark" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 20 C 14 6, 22 34, 32 20 S 50 6, 60 20"/></svg>
+          <h3>Behandelen</h3>
+          <p>Met zachte tot stevigere technieken werkt Cyril aan de plekken die minder goed bewegen, afgestemd op wat jij prettig vindt.</p>
+          <a class="link-arrow" href="/behandelingen#werkwijze">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+        </article>
+        <article class="card" data-reveal style="--i:2">
+          <svg class="card-mark" viewBox="0 0 64 40" aria-hidden="true"><path d="M4 30 L 22 30 C 32 30, 34 12, 44 12 L 60 12"/><path d="M52 6 L 60 12 L 52 18"/></svg>
+          <h3>Advies</h3>
+          <p>Je krijgt uitleg over wat er speelt en eenvoudige adviezen voor thuis of op het werk, zodat je zelf ook verder kunt.</p>
+          <a class="link-arrow" href="/behandelingen#werkwijze">Lees meer <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="eerste-bezoek" aria-labelledby="visit-titel" data-visit>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="visit-titel" data-split>Je eerste bezoek</h2>
+        <p>Zo verloopt een eerste afspraak, van binnenkomen tot naar huis gaan.</p>
+      </div>
+      <div class="timeline" data-timeline>
+        <div class="tl-track" aria-hidden="true"><span class="tl-fill" data-timeline-fill></span></div>
+        <ol class="tl-list">
+        <li class="tl-step" data-step-i="0"><span class="tl-dot" aria-hidden="true"></span><h3>Intake</h3><p>Je vertelt over je klacht, je gezondheid en wat je al hebt geprobeerd.</p></li>
+        <li class="tl-step" data-step-i="1"><span class="tl-dot" aria-hidden="true"></span><h3>Onderzoek</h3><p>Cyril kijkt hoe je staat en beweegt, en voelt waar het lichaam vastzit.</p></li>
+        <li class="tl-step" data-step-i="2"><span class="tl-dot" aria-hidden="true"></span><h3>Behandeling</h3><p>Als osteopathie bij je klacht past, volgt meestal dezelfde afspraak al een eerste behandeling.</p></li>
+        <li class="tl-step" data-step-i="3"><span class="tl-dot" aria-hidden="true"></span><h3>Advies</h3><p>Je hoort wat er speelt, krijgt tips mee en samen spreek je af of en wanneer je terugkomt.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {{reviews}}
+
+  <section class="section cyril" aria-labelledby="cyril-titel">
+    <div class="wrap cyril-grid">
+      <figure class="cyril-photo" data-reveal>
+        <img src="/assets/img/portret-cyril-foto-volgt.svg" width="800" height="1000" alt="Portret van osteopaat Cyril Entjes (foto volgt)" loading="lazy">
+      </figure>
+      <div class="cyril-text">
+        <h2 id="cyril-titel" data-split>Maak kennis met Cyril</h2>
+        <p class="lead">Cyril Entjes is osteopaat en opent in {{plaats}} een eigen praktijk. Je wordt er rustig ontvangen, met tijd voor je verhaal en een behandeling die past bij wat je lichaam nodig heeft.</p>
+        <p>{{partial:todo-cyril}}</p>
+        <a class="link-arrow" href="/over-cyril">Meer over Cyril <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="vragen" aria-labelledby="faq-titel">
+    <div class="wrap faq-grid">
+      <div class="faq-intro">
+        <h2 id="faq-titel" data-split>Veelgestelde vragen</h2>
+        <p>Staat je vraag er niet bij? <a href="/contact">Neem gerust contact op</a>.</p>
+      </div>
+      <div class="faq-list">
+        {{faq}}
+      </div>
+    </div>
+  </section>
+
+  {{partial:afspraak}}
 
 </main>

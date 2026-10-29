@@ -1,0 +1,42 @@
+<!--meta {
+  "title": "Contact en afspraak | Osteopathie Entjes",
+  "description": "Maak een afspraak bij Osteopathie Entjes via WhatsApp, mail of telefoon. Adres, openingstijden en route naar de praktijk in Noord-Holland.",
+  "path": "/contact",
+  "crumb": "Contact",
+  "scripts": ["afspraak"],
+  "schema": ["business"]
+} -->
+<main id="inhoud">
+  <header class="page-hero">
+    <nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+    <h1>Contact</h1>
+    <p>Maak een afspraak, stel een vraag of plan je route naar de praktijk.</p>
+  </header>
+
+  <section class="section" style="padding-top:0" aria-label="Gegevens">
+    <div class="wrap two-col">
+      <div class="panel" id="bellen" data-reveal style="--i:0">
+        <h2>Bellen of mailen</h2>
+        <p><span class="contact-label">Telefoon</span> {{telefoon}}</p>
+        <p><span class="contact-label">E-mail</span> {{email}}</p>
+        <p style="margin-top:1.25rem">{{bel-knop}}</p>
+      </div>
+      <div class="panel" data-reveal style="--i:1">
+        <h2>Adres en route</h2>
+        <address style="font-style:normal"><p>{{adres}}</p></address>
+        <p>{{route}}</p>
+      </div>
+      <div class="panel" data-reveal style="--i:0">
+        <h2>Openingstijden</h2>
+        {{openingstijden}}
+      </div>
+      <div class="panel" data-reveal style="--i:1">
+        <h2>Praktische zaken</h2>
+        <p>Neem je legitimatie en zorgpas mee. <a href="/tarieven">Tarieven en vergoeding</a> · <a href="/#vragen">Veelgestelde vragen</a></p>
+        <p>KvK {{kvk}}</p>
+      </div>
+    </div>
+  </section>
+
+  {{partial:afspraak}}
+</main>

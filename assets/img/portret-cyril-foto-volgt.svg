@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#D5D8C0"/>
+  <path d="M400 330 a90 100 0 1 0 0.1 0 M230 760 c20-150 320-150 340 0" fill="none" stroke="#9AA07A" stroke-width="3"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#3E4724" text-anchor="middle">
+    <text x="400" y="860" font-size="34" font-weight="700" letter-spacing="8">FOTO VOLGT</text>
+    <text x="400" y="905" font-size="22">Portret Cyril Entjes · 4:5</text>
+  </g>
+</svg>

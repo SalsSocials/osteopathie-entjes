@@ -1,0 +1,85 @@
+<section class="section booking" id="afspraak" aria-labelledby="afspraak-titel">
+  <div class="wrap booking-grid">
+    <div class="booking-intro">
+      <h2 id="afspraak-titel" data-split>Maak een afspraak</h2>
+      <p class="lead">Kies wat je zoekt en wanneer het je past. Je krijgt een kant-en-klaar bericht dat je via WhatsApp of mail verstuurt. Liever direct contact? Bel gerust.</p>
+      <ul class="contact-lines">
+        <li>{{bel-knop}}</li>
+        <li><span class="contact-label">Telefoon</span> {{telefoon}}</li>
+        <li><span class="contact-label">E-mail</span> {{email}}</li>
+      </ul>
+    </div>
+
+    <!-- Afspraakflow zonder backend. Komt er een boekingssysteem, vervang dit formulier dan door één knop naar die link. -->
+    <form class="flow" data-flow data-whatsapp="{{whatsapp}}" data-mail="{{mail}}" novalidate>
+      <div class="flow-progress" aria-hidden="true"><span data-flow-bar></span></div>
+      <p class="flow-count" data-flow-count aria-live="polite">Stap 1 van 3</p>
+
+      <fieldset class="flow-step" data-step="1">
+        <legend>Wat voor afspraak wil je?</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="soort" value="Eerste consult" required checked><span><strong>Eerste consult</strong><small>Ik ben nog niet eerder geweest</small></span></label>
+          <label class="option"><input type="radio" name="soort" value="Vervolgafspraak"><span><strong>Vervolgafspraak</strong><small>Ik ben al bij Cyril geweest</small></span></label>
+          <label class="option"><input type="radio" name="soort" value="Eerst een vraag"><span><strong>Eerst een vraag</strong><small>Ik wil weten of het bij mijn klacht past</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="flow-step" data-step="2" hidden>
+        <legend>Wanneer past het je?</legend>
+        <p class="flow-hint" id="dag-hint">Kies een of meer dagen. Cyril stelt daarna een tijd voor.</p>
+        <div class="pills" aria-describedby="dag-hint">
+          <label class="pill"><input type="checkbox" name="dag" value="maandag"><span>Ma</span></label>
+          <label class="pill"><input type="checkbox" name="dag" value="dinsdag"><span>Di</span></label>
+          <label class="pill"><input type="checkbox" name="dag" value="woensdag"><span>Wo</span></label>
+          <label class="pill"><input type="checkbox" name="dag" value="donderdag"><span>Do</span></label>
+          <label class="pill"><input type="checkbox" name="dag" value="vrijdag"><span>Vr</span></label>
+          <label class="pill"><input type="checkbox" name="dag" value="zaterdag"><span>Za</span></label>
+        </div>
+        <p class="flow-sub">Voorkeur voor dagdeel</p>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="dagdeel" value="ochtend"><span>Ochtend</span></label>
+          <label class="pill"><input type="radio" name="dagdeel" value="middag"><span>Middag</span></label>
+          <label class="pill"><input type="radio" name="dagdeel" value="avond"><span>Avond</span></label>
+          <label class="pill"><input type="radio" name="dagdeel" value="maakt niet uit" checked><span>Maakt niet uit</span></label>
+        </div>
+        <div class="flow-hint flow-hours"><span>Openingstijden</span>{{openingstijden}}</div>
+      </fieldset>
+
+      <fieldset class="flow-step" data-step="3" hidden>
+        <legend>Hoe kan Cyril je bereiken?</legend>
+        <div class="field">
+          <label for="f-naam">Naam</label>
+          <input id="f-naam" name="naam" type="text" autocomplete="name" required aria-describedby="f-naam-fout">
+          <p class="field-error" id="f-naam-fout" hidden>Vul je naam in, dan weet Cyril wie er belt.</p>
+        </div>
+        <div class="field">
+          <label for="f-tel">Telefoonnummer</label>
+          <input id="f-tel" name="telefoon" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-tel-fout">
+          <p class="field-error" id="f-tel-fout" hidden>Vul een telefoonnummer in van minstens 10 cijfers.</p>
+        </div>
+        <div class="field">
+          <label for="f-klacht">Waar heb je last van? <span class="optional">(mag je overslaan)</span></label>
+          <textarea id="f-klacht" name="klacht" rows="3" maxlength="400"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="flow-step flow-done" data-step="4" hidden tabindex="-1">
+        <p class="flow-done-title">Je bericht staat klaar</p>
+        <pre class="flow-message" data-flow-message></pre>
+        <div class="flow-send">
+          <a class="btn btn-primary" data-flow-whatsapp href="#" data-track="whatsapp_klik" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#whatsapp"/></svg> Verstuur via WhatsApp</a>
+          <button class="btn btn-quiet" type="button" data-flow-copy>Kopieer bericht</button>
+          <a class="btn btn-quiet" data-flow-mail href="#" data-track="afspraak_klik" data-track-plek="mail"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#envelope"/></svg> Verstuur per mail</a>
+        </div>
+        <p class="flow-hint" data-flow-missing hidden>{{partial:todo-kanalen}}</p>
+        <p class="flow-privacy">Deze site verstuurt of bewaart je gegevens niet. Je kiest zelf of je het bericht verstuurt.</p>
+      </div>
+
+      <div class="flow-nav">
+        <button class="btn btn-quiet" type="button" data-flow-back hidden>Vorige</button>
+        <button class="btn btn-primary" type="button" data-flow-next>Volgende <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></button>
+        <button class="btn btn-quiet" type="button" data-flow-restart hidden>Opnieuw beginnen</button>
+      </div>
+    </form>
+  </div>
+</section>

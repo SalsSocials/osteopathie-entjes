@@ -1,3 +1,37 @@
 <footer class="site-footer">
-  <!-- Volledige footer (gegevens, openingstijden, route) volgt na akkoord op de hero. -->
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="/" aria-label="Osteopathie Entjes, naar de homepage">{{logo}}</a>
+      <p>Osteopathie in {{plaats}}, Noord-Holland. Onderzoek en behandeling met de handen.</p>
+      <a class="btn btn-primary" href="/contact#afspraak" data-track="afspraak_klik" data-track-plek="footer">Afspraak maken</a>
+    </div>
+    <div>
+      <h2 class="footer-h">Contact</h2>
+      <address>
+        <p>{{adres}}</p>
+        <p>{{telefoon}}</p>
+        <p>{{email}}</p>
+      </address>
+      <p class="footer-route">{{route}}</p>
+    </div>
+    <div>
+      <h2 class="footer-h">Openingstijden</h2>
+      {{openingstijden}}
+    </div>
+    <div>
+      <h2 class="footer-h">Aangesloten bij</h2>
+      {{aangesloten}}
+      <h2 class="footer-h">Vergoeding</h2>
+      <p>Osteopathie wordt vaak vergoed uit de aanvullende verzekering. <a href="/tarieven#vergoeding">Bekijk tarieven en vergoeding</a></p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© {{jaar}} Osteopathie Entjes · KvK {{kvk}}</p>
+    <ul>
+      <li><a href="/behandelingen">Behandelingen</a></li>
+      <li><a href="/tarieven">Tarieven</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+    </ul>
+  </div>
 </footer>

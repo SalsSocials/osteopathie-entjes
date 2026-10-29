@@ -1,0 +1,46 @@
+<!--meta {
+  "title": "Tarieven en vergoeding | Osteopathie Entjes",
+  "description": "Tarieven van Osteopathie Entjes voor een eerste consult en vervolgbehandeling, plus uitleg over vergoeding door je zorgverzekeraar.",
+  "path": "/tarieven",
+  "crumb": "Tarieven"
+} -->
+<main id="inhoud">
+  <header class="page-hero">
+    <nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a><span aria-hidden="true">/</span><span>Tarieven</span></nav>
+    <h1>Tarieven en vergoeding</h1>
+    <p>Duidelijk vooraf wat een behandeling kost, en hoe je het kunt terugkrijgen van je zorgverzekeraar.</p>
+  </header>
+
+  <section class="section" style="padding-top:0" aria-label="Tarieven">
+    <div class="wrap">
+      <table class="price-table" data-reveal>
+        <caption class="sr-only">Tarieven per behandeling</caption>
+        <tbody>
+          <tr><th scope="row">Eerste consult<small>Intake, onderzoek en behandeling · {{consult-duur}} minuten</small></th><td>{{tarief-eerste}}</td></tr>
+          <tr><th scope="row">Vervolgbehandeling<small>Behandeling en advies · {{vervolg-duur}} minuten</small></th><td>{{tarief-vervolg}}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section steps-band" aria-label="Vergoeding en registraties">
+    <div class="wrap two-col">
+      <div class="panel" id="vergoeding" data-reveal style="--i:0">
+        <h2>Vergoeding</h2>
+        <p>Veel aanvullende zorgverzekeringen vergoeden osteopathie geheel of gedeeltelijk. Hoeveel je terugkrijgt, hangt af van je polis. Kijk in je polisvoorwaarden onder 'alternatieve geneeswijzen' of 'osteopathie'.</p>
+        <p>Je ontvangt na de behandeling een nota die je bij je verzekeraar kunt indienen. <span class="todo">betaalwijze en nota bevestigen</span></p>
+      </div>
+      <div class="panel" data-reveal style="--i:1">
+        <h2>Aangesloten bij</h2>
+        {{aangesloten}}
+        <p>Verzekeraars vergoeden meestal alleen als de osteopaat bij een erkende beroepsvereniging is aangesloten.</p>
+      </div>
+      <div class="panel panel-wide" data-reveal style="--i:0">
+        <h2>Afspraak verzetten</h2>
+        <p>{{annuleren}}</p>
+      </div>
+    </div>
+  </section>
+
+  {{partial:cta}}
+</main>
