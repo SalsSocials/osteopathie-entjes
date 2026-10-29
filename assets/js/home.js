@@ -134,6 +134,7 @@
   const chips = [...document.querySelectorAll('.zone-chip')];
   const spots = [...document.querySelectorAll('.hotspot')];
   const panels = [...document.querySelectorAll('[data-zone-panel]')];
+  const glows = [...document.querySelectorAll('[data-glow]')];
   let current = chips.find((c) => c.getAttribute('aria-pressed') === 'true')?.dataset.zone;
   spots.forEach((s) => s.classList.toggle('is-active', s.dataset.zone === current));
 
@@ -144,6 +145,7 @@
     current = id;
     chips.forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.zone === id)));
     spots.forEach((s) => s.classList.toggle('is-active', s.dataset.zone === id));
+    glows.forEach((g) => g.classList.toggle('is-active', g.dataset.glow === id));
     window.track?.('klachtenwijzer_zone', { zone: id, via: from });
     if (!motion) { if (prev) prev.hidden = true; next.hidden = false; return; }
     gsap.killTweensOf(panels);

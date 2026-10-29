@@ -3,48 +3,109 @@
     "id": "hoofd-kaak",
     "naam": "Hoofd en kaak",
     "kort": "Hoofd",
-    "x": 50, "y": 9,
-    "klachten": ["Spanningshoofdpijn", "Klachten na lang achter een scherm zitten", "Kaakspanning of klemmen", "Een stijf gevoel rond het achterhoofd"],
+    "x": 50,
+    "y": 7.7,
+    "glow": [
+      [100, 40, 24, 30]
+    ],
+    "symmetrisch": false,
+    "klachten": [
+      "Spanningshoofdpijn",
+      "Klachten na lang achter een scherm zitten",
+      "Kaakspanning of klemmen",
+      "Een stijf gevoel rond het achterhoofd"
+    ],
     "hulp": "Spanning in de nek, de bovenrug en rond de kaak kan doorwerken naar het hoofd. Cyril kijkt hoe deze gebieden samen bewegen en behandelt waar het vastzit. Bij hoofdpijn kan dat helpen om de spanning te verminderen."
   },
   {
     "id": "nek",
     "naam": "Nek",
     "kort": "Nek",
-    "x": 50, "y": 17.5,
-    "klachten": ["Stijve nek", "Pijn bij draaien of opzij kijken", "Uitstraling naar schouder of arm", "Nekklachten na een verkeerde beweging"],
+    "x": 50,
+    "y": 16.5,
+    "glow": [
+      [100, 86, 16, 13]
+    ],
+    "symmetrisch": false,
+    "klachten": [
+      "Stijve nek",
+      "Pijn bij draaien of opzij kijken",
+      "Uitstraling naar schouder of arm",
+      "Nekklachten na een verkeerde beweging"
+    ],
     "hulp": "De nek werkt nauw samen met de schouders, de bovenrug en de ribben. Osteopathie richt zich op die hele keten. Dat wordt vaak gebruikt bij een stijve nek en kan helpen om weer vrijer te draaien."
   },
   {
     "id": "schouders",
     "naam": "Schouders",
     "kort": "Schouders",
-    "x": 30, "y": 23,
-    "klachten": ["Pijn bij heffen of reiken", "Vastzittend gevoel in de schouder", "Spanning tussen de schouderbladen", "Klachten door eenzijdig werk"],
+    "x": 27.5,
+    "y": 23,
+    "glow": [
+      [56, 120, 18, 20]
+    ],
+    "symmetrisch": true,
+    "klachten": [
+      "Pijn bij heffen of reiken",
+      "Vastzittend gevoel in de schouder",
+      "Spanning tussen de schouderbladen",
+      "Klachten door eenzijdig werk"
+    ],
     "hulp": "Een schouder beweegt samen met het schouderblad, de nek en de ribben. Als een van die delen vastzit, moet de rest harder werken. Cyril onderzoekt het geheel; dat kan helpen om de belasting beter te verdelen."
   },
   {
     "id": "rug",
     "naam": "Rug",
     "kort": "Rug",
-    "x": 50, "y": 42,
-    "klachten": ["Lage rugpijn", "Stijfheid bij opstaan", "Pijn na tillen of bukken", "Een rug die snel moe wordt bij zitten of staan"],
+    "x": 50,
+    "y": 39.4,
+    "glow": [
+      [100, 205, 28, 72]
+    ],
+    "symmetrisch": false,
+    "klachten": [
+      "Lage rugpijn",
+      "Stijfheid bij opstaan",
+      "Pijn na tillen of bukken",
+      "Een rug die snel moe wordt bij zitten of staan"
+    ],
     "hulp": "Rugklachten zijn een van de redenen waarom mensen het vaakst naar een osteopaat gaan. Cyril kijkt naar de wervelkolom, het bekken en de omliggende spieren en organen. De behandeling kan helpen om de rug weer soepeler te laten bewegen."
   },
   {
     "id": "heup-bekken",
     "naam": "Heup en bekken",
     "kort": "Heup",
-    "x": 37, "y": 58,
-    "klachten": ["Pijn in de lies of zijkant van de heup", "Klachten rond het bekken", "Moeite met lang zitten of traplopen", "Een scheef of instabiel gevoel"],
+    "x": 40,
+    "y": 58.7,
+    "glow": [
+      [80, 305, 22, 26]
+    ],
+    "symmetrisch": true,
+    "klachten": [
+      "Pijn in de lies of zijkant van de heup",
+      "Klachten rond het bekken",
+      "Moeite met lang zitten of traplopen",
+      "Een scheef of instabiel gevoel"
+    ],
     "hulp": "Het bekken is het scharnierpunt tussen rug en benen. Een verschil in beweging links en rechts kan klachten geven op allerlei plekken. Osteopathie wordt vaak gebruikt om die balans te onderzoeken en waar nodig te behandelen."
   },
   {
     "id": "knie-enkel",
     "naam": "Knie en enkel",
     "kort": "Knie",
-    "x": 38, "y": 81,
-    "klachten": ["Knieklachten bij sporten of traplopen", "Een enkel die na een verzwikking blijft opspelen", "Overbelasting door hardlopen", "Stijfheid na lang stilzitten"],
+    "x": 41,
+    "y": 77.9,
+    "glow": [
+      [82, 405, 13, 15],
+      [87, 500, 9, 11]
+    ],
+    "symmetrisch": true,
+    "klachten": [
+      "Knieklachten bij sporten of traplopen",
+      "Een enkel die na een verzwikking blijft opspelen",
+      "Overbelasting door hardlopen",
+      "Stijfheid na lang stilzitten"
+    ],
     "hulp": "Hoe je knie en enkel belast worden, hangt ook af van je heup en voet. Cyril bekijkt hoe het been als geheel beweegt. Dat kan helpen bij klachten die steeds terugkomen."
   }
 ]

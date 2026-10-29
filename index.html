@@ -160,28 +160,51 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="wrap finder-grid">
       <div class="finder-figure">
         <div class="body-map">
-          <svg class="body-line" viewBox="0 0 240 520" aria-hidden="true">
-            <g class="body-outline">
-              <ellipse cx="120" cy="50" rx="25" ry="31"/>
-              <path d="M108 79 C 109 88, 109 94, 108 100 M132 79 C 131 88, 131 94, 132 100"/>
-              <path d="M108 100 C 90 103, 72 107, 63 122 C 56 170, 52 215, 48 260 C 46 282, 47 298, 52 312"/>
-              <path d="M132 100 C 150 103, 168 107, 177 122 C 184 170, 188 215, 192 260 C 194 282, 193 298, 188 312"/>
-              <path d="M72 140 C 76 185, 82 222, 84 252 C 86 272, 80 290, 78 302"/>
-              <path d="M168 140 C 164 185, 158 222, 156 252 C 154 272, 160 290, 162 302"/>
-              <path d="M78 302 C 74 350, 80 400, 86 432 C 90 465, 90 490, 90 506 L 70 512"/>
-              <path d="M162 302 C 166 350, 160 400, 154 432 C 150 465, 150 490, 150 506 L 170 512"/>
-              <path d="M117 322 C 113 365, 110 400, 108 432 C 106 465, 105 490, 105 506"/>
-              <path d="M123 322 C 127 365, 130 400, 132 432 C 134 465, 135 490, 135 506"/>
-              <path d="M78 302 C 92 318, 106 324, 117 322 M162 302 C 148 318, 134 324, 123 322"/>
-            </g>
-            <path class="body-spine" d="M120 100 C 114 140, 114 170, 120 200 C 126 235, 126 268, 120 300"/>
-          </svg>
-          <button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="hoofd-kaak" style="--x:50%;--y:9%"><span>Hoofd</span></button>
-<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="nek" style="--x:50%;--y:17.5%"><span>Nek</span></button>
-<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="schouders" style="--x:30%;--y:23%"><span>Schouders</span></button>
-<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="rug" style="--x:50%;--y:42%"><span>Rug</span></button>
-<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="heup-bekken" style="--x:37%;--y:58%"><span>Heup</span></button>
-<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="knie-enkel" style="--x:38%;--y:81%"><span>Knie</span></button>
+          <div class="body-stage">
+            <svg class="body-line" viewBox="0 0 200 520" aria-hidden="true">
+  <defs>
+    <path id="lh-romp" d="M101 9 L100 9 C 85 9, 76 21, 76 37 C 76 50, 81 60, 89 66 C 90 73, 90 79, 88 84 C 79 90, 64 95, 55 104 C 50 112, 51 128, 56 142 C 60 150, 63 154, 65 160 C 68 186, 73 218, 74 246 C 74 264, 66 282, 64 300 C 62 318, 62 332, 63 348 C 65 372, 69 392, 72 410 C 67 428, 66 452, 73 476 C 77 490, 80 500, 80 508 C 80 514, 85 518, 94 518 C 99 518, 99 512, 97 504 C 94 490, 92 470, 94 450 C 96 432, 94 418, 92 405 C 91 380, 97 352, 100 336 L101 336 Z"/>
+    <path id="lh-arm" d="M57 104 C 45 107, 40 122, 42 140 C 40 168, 38 194, 40 212 C 40 240, 42 266, 45 288 C 45 300, 44 312, 47 324 C 50 334, 57 334, 58 323 C 58 311, 58 300, 58 290 C 58 266, 60 240, 60 214 C 62 190, 63 170, 63 150 C 63 128, 63 112, 57 104 Z"/>
+    <clipPath id="lh-clip">
+      <use href="#lh-romp"/><use href="#lh-romp" transform="matrix(-1 0 0 1 200 0)"/>
+      <use href="#lh-arm"/><use href="#lh-arm" transform="matrix(-1 0 0 1 200 0)"/>
+    </clipPath>
+    <filter id="lh-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+  </defs>
+  <g class="body-fill">
+    <use href="#lh-arm"/><use href="#lh-arm" transform="matrix(-1 0 0 1 200 0)"/>
+    <use href="#lh-romp"/><use href="#lh-romp" transform="matrix(-1 0 0 1 200 0)"/>
+  </g>
+  <g class="body-glow" clip-path="url(#lh-clip)"><g class="glow" data-glow="hoofd-kaak" filter="url(#lh-blur)"><ellipse cx="100" cy="40" rx="24" ry="30"/></g><g class="glow" data-glow="nek" filter="url(#lh-blur)"><ellipse cx="100" cy="86" rx="16" ry="13"/></g><g class="glow" data-glow="schouders" filter="url(#lh-blur)"><ellipse cx="56" cy="120" rx="18" ry="20"/><ellipse cx="144" cy="120" rx="18" ry="20"/></g><g class="glow is-active" data-glow="rug" filter="url(#lh-blur)"><ellipse cx="100" cy="205" rx="28" ry="72"/></g><g class="glow" data-glow="heup-bekken" filter="url(#lh-blur)"><ellipse cx="80" cy="305" rx="22" ry="26"/><ellipse cx="120" cy="305" rx="22" ry="26"/></g><g class="glow" data-glow="knie-enkel" filter="url(#lh-blur)"><ellipse cx="82" cy="405" rx="13" ry="15"/><ellipse cx="118" cy="405" rx="13" ry="15"/><ellipse cx="87" cy="500" rx="9" ry="11"/><ellipse cx="113" cy="500" rx="9" ry="11"/></g></g>
+  <g class="body-outline">
+    <path d="M100 9 C 85 9, 76 21, 76 37 C 76 50, 81 60, 89 66 C 90 73, 90 79, 88 84 C 79 90, 64 95, 55 104"/>
+    <path d="M65 160 C 68 186, 73 218, 74 246 C 74 264, 66 282, 64 300 C 62 318, 62 332, 63 348 C 65 372, 69 392, 72 410 C 67 428, 66 452, 73 476 C 77 490, 80 500, 80 508 C 80 514, 85 518, 94 518 C 99 518, 99 512, 97 504 C 94 490, 92 470, 94 450 C 96 432, 94 418, 92 405 C 91 380, 97 352, 100 336"/>
+    <path d="M57 104 C 45 107, 40 122, 42 140 C 40 168, 38 194, 40 212 C 40 240, 42 266, 45 288 C 45 300, 44 312, 47 324 C 50 334, 57 334, 58 323 C 58 311, 58 300, 58 290 C 58 266, 60 240, 60 214 C 62 190, 63 170, 63 150"/>
+    <g transform="matrix(-1 0 0 1 200 0)">
+      <path d="M100 9 C 85 9, 76 21, 76 37 C 76 50, 81 60, 89 66 C 90 73, 90 79, 88 84 C 79 90, 64 95, 55 104"/>
+      <path d="M65 160 C 68 186, 73 218, 74 246 C 74 264, 66 282, 64 300 C 62 318, 62 332, 63 348 C 65 372, 69 392, 72 410 C 67 428, 66 452, 73 476 C 77 490, 80 500, 80 508 C 80 514, 85 518, 94 518 C 99 518, 99 512, 97 504 C 94 490, 92 470, 94 450 C 96 432, 94 418, 92 405 C 91 380, 97 352, 100 336"/>
+      <path d="M57 104 C 45 107, 40 122, 42 140 C 40 168, 38 194, 40 212 C 40 240, 42 266, 45 288 C 45 300, 44 312, 47 324 C 50 334, 57 334, 58 323 C 58 311, 58 300, 58 290 C 58 266, 60 240, 60 214 C 62 190, 63 170, 63 150"/>
+    </g>
+  </g>
+  <g class="body-detail">
+    <path d="M70 128 C 74 142, 77 160, 84 174 C 88 160, 88 140, 84 124"/>
+    <path d="M130 128 C 126 142, 123 160, 116 174 C 112 160, 112 140, 116 124"/>
+    <path d="M100 300 L 100 334"/>
+    <path d="M70 340 C 80 347, 92 347, 99 339"/><path d="M130 340 C 120 347, 108 347, 101 339"/>
+    <path d="M77 404 C 82 400, 87 400, 91 404"/><path d="M123 404 C 118 400, 113 400, 109 404"/>
+    <path d="M44 214 C 47 211, 52 211, 56 214"/><path d="M156 214 C 153 211, 148 211, 144 214"/>
+    <path d="M84 278 C 88 282, 90 282, 92 280"/><path d="M116 278 C 112 282, 110 282, 108 280"/>
+  </g>
+  <path class="body-spine" d="M100 86 C 98 130, 98 170, 101 210 C 103 245, 102 270, 100 296"/>
+</svg>
+
+            <button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="hoofd-kaak" style="--x:50%;--y:7.7%"><span>Hoofd</span></button>
+<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="nek" style="--x:50%;--y:16.5%"><span>Nek</span></button>
+<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="schouders" style="--x:27.5%;--y:23%"><span>Schouders</span></button>
+<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="rug" style="--x:50%;--y:39.4%"><span>Rug</span></button>
+<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="heup-bekken" style="--x:40%;--y:58.7%"><span>Heup</span></button>
+<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="knie-enkel" style="--x:41%;--y:77.9%"><span>Knie</span></button>
+          </div>
         </div>
       </div>
       <div class="finder-content">

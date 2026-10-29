@@ -64,6 +64,10 @@ const tokens = {
     `<button class="zone-chip" type="button" data-zone="${z.id}" aria-pressed="${i === 3}" aria-controls="zone-panel">${esc(z.naam)}</button>`).join('\n'),
   'zone-hotspots': () => ZONES.map((z) =>
     `<button class="hotspot" type="button" tabindex="-1" aria-hidden="true" data-zone="${z.id}" style="--x:${z.x}%;--y:${z.y}%"><span>${esc(z.kort)}</span></button>`).join('\n'),
+  'zone-glows': () => ZONES.map((z, i) => {
+    const ell = z.glow.map(([cx, cy, rx, ry]) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"/>` + (z.symmetrisch ? `<ellipse cx="${200 - cx}" cy="${cy}" rx="${rx}" ry="${ry}"/>` : '')).join('');
+    return `<g class="glow${i === 3 ? ' is-active' : ''}" data-glow="${z.id}" filter="url(#lh-blur)">${ell}</g>`;
+  }).join(''),
   'zone-panels': () => ZONES.map((z, i) => `
 <article class="zone-card" data-zone-panel="${z.id}" ${i === 3 ? '' : 'hidden'}>
   <h3>${esc(z.naam)}</h3>
