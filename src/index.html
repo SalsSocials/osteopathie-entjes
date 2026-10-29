@@ -1,0 +1,59 @@
+<!--meta {
+  "title": "Osteopathie Entjes | Osteopaat Cyril Entjes in Noord-Holland",
+  "description": "Osteopathie bij nek-, rug-, schouder- en heupklachten. Osteopaat Cyril Entjes onderzoekt en behandelt met de handen. Bekijk of het bij je klacht past en maak een afspraak.",
+  "path": "/",
+  "scripts": ["gsap", "lenis", "home"]
+} -->
+<main id="inhoud">
+
+  <section class="hero" aria-labelledby="hero-titel" data-hero>
+    <div class="hero-copy">
+      <h1 class="hero-title" id="hero-titel">
+        <span class="word" style="--i:0"><span>Beweeg</span></span>
+        <span class="word" style="--i:1"><span>weer</span></span>
+        <span class="word word-free" style="--i:2"><span>vrij</span><svg class="swash" viewBox="0 0 220 40" aria-hidden="true" preserveAspectRatio="none"><path d="M4 26 C 40 10, 70 36, 110 22 S 180 8, 216 18"/></svg></span>
+      </h1>
+      <p class="hero-lead">Osteopathie zoekt met de handen waar je lichaam vastzit, en helpt het weer soepel te bewegen.</p>
+      <div class="hero-actions">
+        <span class="magnet" data-magnetic>
+          <a class="btn btn-primary btn-lg" href="#afspraak" data-track="afspraak_klik" data-track-plek="hero">
+            Maak een afspraak
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg>
+          </a>
+        </span>
+        <a class="btn btn-quiet btn-lg" href="#klachtenwijzer">Kijk of het bij je past</a>
+      </div>
+      <p class="hero-meta">
+        <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#map-pin"/></svg>
+        <span>Praktijk in {{plaats}}, Noord-Holland</span>
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="plate" aria-hidden="true">
+        <svg class="plate-leaves" viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice">
+          <path d="M-20 420 C 90 360, 170 300, 250 180 S 360 40, 430 10"/>
+          <path d="M120 330 c -30 -40 -80 -40 -110 -20 c 40 20 80 30 110 20 Z"/>
+          <path d="M175 270 c 10 -50 50 -80 90 -84 c -14 40 -46 70 -90 84 Z"/>
+          <path d="M215 220 c -40 -26 -88 -16 -110 10 c 42 8 82 6 110 -10 Z"/>
+          <path d="M270 150 c 14 -44 52 -68 88 -66 c -18 36 -50 60 -88 66 Z"/>
+          <path d="M300 112 c -34 -30 -80 -28 -104 -6 c 38 12 76 14 104 6 Z"/>
+        </svg>
+        <svg class="spine" viewBox="0 0 200 600" preserveAspectRatio="xMidYMid meet">
+          <path class="spine-line" data-spine-line d="M100 20 C 100 20, 146 112, 146 112 C 146 112, 62 230, 62 230 C 62 230, 140 362, 140 362 C 140 362, 78 470, 78 470 C 78 470, 100 580, 100 580"/>
+          <g class="spine-vertebrae" data-vertebrae></g>
+          <path class="spine-bones" data-spine-bones d="M100 20 C 100 20, 146 112, 146 112 C 146 112, 62 230, 62 230 C 62 230, 140 362, 140 362 C 140 362, 78 470, 78 470 C 78 470, 100 580, 100 580"/>
+        </svg>
+      </div>
+      <figure class="hero-photo">
+        <img src="/assets/img/hero-behandeling-foto-volgt.svg" width="800" height="1000" alt="Cyril Entjes behandelt een cliënt in de praktijk (foto volgt)" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="next-up" id="klachtenwijzer" aria-label="Volgende secties">
+    <p>Hier komen de snelle feiten, de klachtenwijzer en de rest van de pagina, na akkoord op de hero.</p>
+  </section>
+  <div id="afspraak"></div>
+
+</main>

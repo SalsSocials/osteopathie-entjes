@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#DCD5C6"/>
+  <path d="M-40 760 C 180 640 300 900 520 780 S 760 640 860 700" fill="none" stroke="#B8A893" stroke-width="3"/>
+  <path d="M-40 820 C 180 700 300 960 520 840 S 760 700 860 760" fill="none" stroke="#B8A893" stroke-width="1.5"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#4A4436" text-anchor="middle">
+    <text x="400" y="470" font-size="34" font-weight="700" letter-spacing="8">FOTO VOLGT</text>
+    <text x="400" y="520" font-size="22">Behandeling in de praktijk · 4:5</text>
+  </g>
+</svg>

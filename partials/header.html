@@ -1,0 +1,57 @@
+<a class="skip-link" href="#inhoud">Naar de inhoud</a>
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="Osteopathie Entjes, naar de homepage">{{logo}}</a>
+
+    <nav class="main-nav" aria-label="Hoofdmenu">
+      <ul class="nav-list">
+        <li class="has-sub" data-sub>
+          <a href="/behandelingen" {{current:/behandelingen}}>Behandelingen</a>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-behandelingen">
+            <span class="sr-only">Toon klachtgebieden</span>
+            <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#caret-down"/></svg>
+          </button>
+          <div class="submenu" id="sub-behandelingen">
+            <ul>
+              <li><a href="/behandelingen#nek-schouders">Nek en schouders</a></li>
+              <li><a href="/behandelingen#rug">Rug</a></li>
+              <li><a href="/behandelingen#heup-bekken">Heup en bekken</a></li>
+              <li><a href="/behandelingen#knie-enkel">Knie en enkel</a></li>
+              <li><a href="/behandelingen#hoofd-kaak">Hoofdpijn en kaak</a></li>
+            </ul>
+            <a class="submenu-all" href="/behandelingen">Alle behandelingen <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+          </div>
+        </li>
+        <li><a href="/#eerste-bezoek">Hoe werkt het</a></li>
+        <li><a href="/over-cyril" {{current:/over-cyril}}>Over Cyril</a></li>
+        <li><a href="/tarieven" {{current:/tarieven}}>Tarieven</a></li>
+        <li><a href="/contact" {{current:/contact}}>Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary header-cta" href="/contact#afspraak" data-track="afspraak_klik" data-track-plek="header">Afspraak maken</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobiel-menu">
+      <svg class="icon icon-open" aria-hidden="true"><use href="/assets/icons.svg#list"/></svg>
+      <svg class="icon icon-close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobiel-menu" hidden>
+    <ul>
+      <li><a href="/behandelingen">Behandelingen</a></li>
+      <li><a href="/#eerste-bezoek">Hoe werkt het</a></li>
+      <li><a href="/over-cyril">Over Cyril</a></li>
+      <li><a href="/tarieven">Tarieven</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<nav class="quickbar" aria-label="Snel contact">
+  {{bel-link:quickbar-link}}
+  <a class="quickbar-link quickbar-primary" href="/contact#afspraak" data-track="afspraak_klik" data-track-plek="onderbalk">
+    <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#calendar"/></svg> Afspraak
+  </a>
+</nav>

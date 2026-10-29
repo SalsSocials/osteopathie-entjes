@@ -1,0 +1,8 @@
+<!-- Tijdelijk woordmerk. Vervang dit bestand door het echte logo en draai `node build.mjs`. Kleuren komen uit de CSS-variabelen --logo-mark en --logo-ink. -->
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 40" role="img" aria-label="Osteopathie Entjes">
+  <g fill="none" stroke="var(--logo-mark, #5E6B3A)" stroke-linecap="round">
+    <path d="M13 2.5c-8 6 8 11.5 0 17.5s8 11.5 0 17.5" stroke-width="1.4"/>
+    <path d="M13 2.5c-8 6 8 11.5 0 17.5s8 11.5 0 17.5" stroke-width="5.2" stroke-dasharray="1.6 5.4" stroke-dashoffset="-2"/>
+  </g>
+  <text x="32" y="28" fill="var(--logo-ink, #2B2A22)" font-family="'Bodoni Moda', 'Bodoni 72', Didot, serif" font-size="25" font-weight="600" letter-spacing="-0.1">Osteopathie Entjes</text>
+</svg>
