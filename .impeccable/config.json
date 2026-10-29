@@ -17,15 +17,6 @@
         "reason": "brief van Sal: --cream ca. #F6F1E7 expliciet voorgeschreven als achtergrond"
       },
       {
-        "rule": "repeating-stripes-gradient",
-        "value": "*",
-        "files": [
-          "assets/css/site.css"
-        ],
-        "createdAt": "2026-10-29T02:24:11.841Z",
-        "reason": "alleen op .review.is-example: bewuste markering van VOORBEELD-reviewkaarten die Sal moet vervangen"
-      },
-      {
         "rule": "flat-type-hierarchy",
         "value": "*",
         "files": [

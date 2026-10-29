@@ -396,7 +396,7 @@ h2[data-split] .w > span { display: inline-block; }
 /* ---------- Reviews ---------- */
 .review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
 .review { margin: 0; display: flex; flex-direction: column; gap: 1rem; padding: clamp(1.5rem, 2.6vw, 2rem); background: var(--cream-hi); border-radius: var(--radius-lg); box-shadow: 0 0 0 1px var(--taupe-soft); }
-.review.is-example { box-shadow: 0 0 0 1px #A58B2A; background: repeating-linear-gradient(-45deg, var(--cream-hi) 0 14px, #FAF3DB 14px 28px); }
+.review.is-example { box-shadow: none; outline: 1px dashed #A58B2A; outline-offset: -1px; background: #FAF3DB; }
 .stars { display: flex; gap: 3px; }
 .stars svg { width: 18px; height: 18px; fill: var(--olive); }
 .review blockquote { margin: 0; flex: 1; font-size: var(--step-1); line-height: 1.5; }
