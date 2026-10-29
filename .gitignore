@@ -3,3 +3,4 @@ node_modules/
 .impeccable/config.local.json
 .claude/settings.local.json
 .impeccable/review/
+.vercel
