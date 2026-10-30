@@ -176,22 +176,14 @@
     if (!motion) {
       steps.forEach((s) => s.classList.add('is-lit'));
     } else {
+      // Geen pin: een vastgezette sectie liet op hoge schermen een leeg vlak eronder achter.
       const mm = gsap.matchMedia();
-      mm.add('(min-width: 861px)', () => {
-        gsap.set(fill, { scaleX: 0, scaleY: 1 });
+      mm.add({ wide: '(min-width: 861px)', narrow: '(max-width: 860px)' }, (ctx) => {
+        const wide = ctx.conditions.wide;
+        gsap.set(fill, wide ? { scaleX: 0, scaleY: 1 } : { scaleY: 0, scaleX: 1 });
         gsap.to(fill, {
-          scaleX: 1, ease: 'none',
-          scrollTrigger: {
-            trigger: '[data-visit]', start: 'top top', end: '+=110%', pin: true, scrub: 0.6,
-            onUpdate: (st) => light(st.progress),
-          },
-        });
-      });
-      mm.add('(max-width: 860px)', () => {
-        gsap.set(fill, { scaleY: 0, scaleX: 1 });
-        gsap.to(fill, {
-          scaleY: 1, ease: 'none',
-          scrollTrigger: { trigger: timeline, start: 'top 70%', end: 'bottom 60%', scrub: 0.6, onUpdate: (st) => light(st.progress) },
+          [wide ? 'scaleX' : 'scaleY']: 1, ease: 'none',
+          scrollTrigger: { trigger: timeline, start: wide ? 'top 75%' : 'top 70%', end: wide ? 'bottom 45%' : 'bottom 60%', scrub: 0.6, onUpdate: (st) => light(st.progress) },
         });
       });
     }
