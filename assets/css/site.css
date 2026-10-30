@@ -14,7 +14,9 @@
   --cream: #F6F1E7;        /* achtergrond */
   --cream-hi: #FBF8F1;
   --taupe: #B8A893;        /* accent, randen */
-  --taupe-soft: #E9E1D3;   /* kaarten */
+  --taupe-soft: #E9E1D3;   /* lijnen en zachte randen */
+  --beige: #E6D8C1;        /* warme zandvlakken (wens Cyril) */
+  --beige-soft: #EFE6D6;   /* kaarten, footer */
   --ink: #2B2A22;          /* tekst, 13.6:1 op crème */
   --ink-soft: #57533F;     /* secundaire tekst, 7.0:1 op crème */
   --on-olive: #F6F1E7;
@@ -240,7 +242,7 @@ html { scrollbar-color: var(--taupe) var(--cream); }
 .spine-vertebrae rect { fill: var(--on-olive); }
 .hero-photo {
   position: absolute; left: 0; bottom: 8%; width: 46%; margin: 0;
-  padding: 8px; background: var(--cream-hi); border-radius: var(--radius-lg);
+  padding: 8px; background: var(--beige-soft); border-radius: var(--radius-lg);
   box-shadow: 0 30px 60px -30px rgb(47 54 27 / 0.55);
 }
 .hero-photo img { border-radius: 9px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
@@ -317,7 +319,7 @@ h2[data-split] .w > span { display: inline-block; }
 
 /* ---------- Snelle feiten ---------- */
 .facts { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
-.facts-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--taupe); border-bottom: 1px solid var(--taupe); }
+.facts-list { background: var(--beige-soft); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; border-top: 1px solid var(--taupe); border-bottom: 1px solid var(--taupe); }
 .fact { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 0.6rem; padding: clamp(1.6rem, 3vw, 2.6rem) clamp(1rem, 2.5vw, 2.5rem); }
 .fact + .fact { border-left: 1px solid var(--taupe); }
 .fact dt { font-size: var(--step--1); color: var(--ink-soft); letter-spacing: 0.01em; }
@@ -373,7 +375,7 @@ h2[data-split] .w > span { display: inline-block; }
 /* ---------- Wat is osteopathie ---------- */
 .definition { font-size: var(--step-1); color: var(--ink) !important; line-height: 1.5; }
 .card-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
-.card { display: flex; flex-direction: column; gap: 0.9rem; padding: clamp(1.5rem, 2.6vw, 2.2rem); background: var(--taupe-soft); border-radius: var(--radius-lg); transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), background-color 0.3s; }
+.card { display: flex; flex-direction: column; gap: 0.9rem; padding: clamp(1.5rem, 2.6vw, 2.2rem); background: var(--beige-soft); border-radius: var(--radius-lg); transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), background-color 0.3s; }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); background: var(--cream-hi); }
 .card-mark { width: 64px; height: 40px; margin-bottom: 0.6rem; }
 .card-mark path { fill: none; stroke: var(--olive); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -409,7 +411,7 @@ h2[data-split] .w > span { display: inline-block; }
 .review figcaption span { color: var(--ink-soft); }
 
 /* ---------- Over Cyril ---------- */
-.cyril { background: var(--sage-soft); }
+.cyril { background: var(--beige); }
 .cyril-grid { display: grid; grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
 .cyril-photo { margin: 0; max-width: 380px; }
 .cyril-photo img { border-radius: 120px var(--radius-lg) var(--radius-lg) var(--radius-lg); aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
@@ -436,7 +438,7 @@ h2[data-split] .w > span { display: inline-block; }
 .faq-answer { padding: 0 3.5rem 1.5rem 0; max-width: 68ch; }
 
 /* ---------- Afspraak ---------- */
-.booking { background: var(--taupe-soft); }
+.booking { background: var(--beige); }
 .booking-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
 .booking-intro h2 { font-size: var(--step-3); color: var(--olive-dark); margin-bottom: 1.25rem; }
 .contact-lines { margin-top: 2rem; display: grid; gap: 0.75rem; }
@@ -484,7 +486,7 @@ h2[data-split] .w > span { display: inline-block; }
 .flow-nav [data-flow-next] { margin-left: auto; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--cream); padding: clamp(3.5rem, 7vw, 6rem) 0 2rem; border-top: 1px solid var(--taupe); }
+.site-footer { background: var(--beige-soft); padding: clamp(3.5rem, 7vw, 6rem) 0 2rem; border-top: 1px solid var(--taupe); }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 2.5rem; }
 .brand-footer { width: 230px; margin-bottom: 1.2rem; }
 .footer-brand p { max-width: 32ch; color: var(--ink-soft); margin-bottom: 1.5rem; }
@@ -515,7 +517,7 @@ h2[data-split] .w > span { display: inline-block; }
 .treat-body h3 { margin: 1.6rem 0 0.4rem; font-family: var(--font-body); font-size: var(--step--1); font-weight: 700; color: var(--ink-soft); }
 .treat-body .ticks { max-width: 48ch; margin-bottom: 1.4rem; }
 .notice { display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem 1.4rem; background: var(--sage-soft); border-radius: var(--radius-lg); max-width: 70ch; }
-.steps-band { background: var(--sage-soft); }
+.steps-band { background: var(--beige); }
 .method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
 .method > div { background: var(--cream-hi); border-radius: var(--radius-lg); padding: clamp(1.4rem, 2.5vw, 2rem); }
 .method h3 { font-size: var(--step-2); color: var(--olive-dark); margin-bottom: 0.7rem; }
